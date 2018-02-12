@@ -1,0 +1,20 @@
+body {
+	font-size: 3rem;
+}
+
+ul {
+	padding: 30px 0;
+	text-align: center;
+}
+
+.list-inline li {
+	display: inline-block;
+	border: 5px solid #555;
+	padding: 30px 20px;
+	background-color: #ccc;
+}
+
+li.active {
+	background-color: #999;
+	color: white;
+}
