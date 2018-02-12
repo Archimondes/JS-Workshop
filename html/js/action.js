@@ -1,8 +1,7 @@
 var active = function (e) {
-  var children = e.currentTarget.parentNode.children;
-  for (var child of children) {
+  var li = e.currentTarget.parentNode.children;
+  for (var child of li) {
     child.classList.remove('active');
-    if (child == e.currentTarget)
-      child.classList.add('active');
   }
+  e.currentTarget.classList.add('active');
 };

@@ -1,15 +1,19 @@
 var active = function (e) {
-	var children = e.currentTarget.parentNode.children;
-	for (var child of children) {
-    	child.classList.remove('active');
-    	if (child == e.currentTarget)
-      	child.classList.add('active');
-  	}
+  var li = e.currentTarget.parentNode.children;
+  for (var child of li) {
+    child.classList.remove('active');
+  }
+  e.currentTarget.classList.add('active');
 };
 
+var yoyoyo = function() {
+  console.log('yoyoyo');
+}
+
 window.onload = function() {
-	var list = document.querySelectorAll('li');
-	list.forEach(function(li){
-		li.addEventListener('click', active);
-	});
-};
+  var list = document.querySelectorAll('li');
+  for (var li of list) {
+    li.addEventListener('click', active);
+    li.addEventListener('click', yoyoyo);
+  }
+}
